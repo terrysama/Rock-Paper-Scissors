@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rock Paper Scissors</title>
+
+    <link rel="stylesheet" href="./src/css/style.css">
+</head>
+<body>
+    
+    <main>
+        <div id="container">
+            <h1>Rock Paper Scissors</h1>
+
+            <div class="game">
+                <div class="game-board">
+                    <!-- game parameters -->
+                    <div class="rounds">
+                        <!-- reset the game anytime -->
+                        <button class="reset">Restart</button>
+                        <h3>Game of</h3>
+                        <!-- select number of rounds to play -->
+                        <div class="mode-btn">
+                            <button class="mode selected">1 round</button>
+                            <button class="mode">3 rounds</button>
+                            <button class="mode">5 rounds</button>
+                            <button class="mode">7 rounds</button>
+                        </div>                    
+                    </div>
+
+                    <!-- display score of player and computer -->
+                    <div id="score-board">
+                        <div class="player-score">
+                            <h2>Player</h2>
+                            <p class="player-count">0</p>
+                        </div>
+                        <div class="computer-score">
+                            <h2>Computer</h2>
+                            <p class="computer-count">0</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- display number of moves left before game ends -->
+                <div class="moves">
+                    <h3>Moves left</h3>
+                    <p class="moves-count"></p>
+                </div>
+
+                <div class="choices">
+                    <!-- display player choice and computer choice -->
+                    <div id="not-playing" class="choice-display">
+                        <div class="boxes">
+                            <div class="rps-option">
+                                <img src="./src/images/big rock.jpg" alt="Rock" class="rps-option">
+                            </div>
+                            <div class="rps-option">
+                                <img src="./src/images/big paper.jpg" alt="Paper" class="rps-option">
+                            </div>
+                            <div class="rps-option">
+                                <img src="./src/images/big scissors.jpg" alt="Scissors" class="rps-option">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="playing" class="choice-display hidden">
+                        <div class="boxes">
+                            <div class="rps-option rps-option-reversed rps-choice up-down">
+                                <img src="./src/images/big rock.jpg" alt="Rock" class="rps-option rps-option-reversed player-rps-choice up-down">
+                            </div>
+                            <div class="rps-option rps-choice up-down">
+                                <img src="./src/images/big rock.jpg" alt="Rock" class="rps-option computer-rps-choice up-down">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="message">
+                        <h2 class="message">Choose Your Move</h2>
+                        <h2 class="result hidden"> </h2>
+                    </div>
+
+                    <!-- reload and reset -->
+                    <div class="options">
+                        <button class="reload">Next Round</button>
+                        <!-- new game -->
+                        <button class="reset new">New Game</button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="./src/js/app.js"></script>
+</body>
+</html>
